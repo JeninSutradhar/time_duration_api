@@ -1,13 +1,13 @@
 [package]
 name = "time_duration_api"
-version = "0.1.2"
+version = "0.1.5"
 edition = "2021"
 description = " This crate provides a time/duration API for Rust"
 license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
-chrono = "0.4.19"
+chrono = "0.4.33"
 
 
 
