@@ -50,7 +50,7 @@ pub mod time_utils {
         ///
         /// ```
         /// use time_duration_api::time_utils::Time;
-        /// let now = Time::now();
+        /// let mut now = Time::now();
         /// println!("Current time: {}", now.format("%Y-%m-%d %H:%M:%S").unwrap());
         /// ```
         pub fn now() -> Self {
@@ -68,7 +68,7 @@ pub mod time_utils {
         ///
         /// ```
         /// use time_duration_api::time_utils::Time;
-        /// let time = Time::now();
+        /// let mut time = Time::now();
         /// let formatted_time = time.format("%Y-%m-%d %H:%M:%S").unwrap();
         /// println!("Formatted time: {}", formatted_time);
         /// ```
@@ -108,7 +108,7 @@ pub mod time_utils {
         ///
         /// ```
         /// use time_duration_api::time_utils::Time;
-        /// let time = Time::now();
+        /// let mut time = Time::now();
         /// let formatted_time = time.format_with_timezone("%Y-%m-%d %H:%M:%S", "+05:30").unwrap();
         /// println!("Formatted time in IST: {}", formatted_time);
         /// ```
@@ -128,7 +128,7 @@ pub mod time_utils {
         ///
         /// ```
         /// use time_duration_api::time_utils::Time;
-        /// let time = Time::now();
+        /// let mut time = Time::now();
         /// let timestamp = time.timestamp().unwrap();
         /// println!("Timestamp: {}", timestamp);
         /// ```
@@ -145,9 +145,9 @@ pub mod time_utils {
         ///
         /// ```
         /// use time_duration_api::time_utils::{Time, CustomDuration};
-        /// let time = Time::now();
-        /// let duration = CustomDuration::from_secs(3600); // 1 hour
-        /// let future_time = time.add_duration(&duration);
+        /// let mut time = Time::now();
+        /// let mut duration = CustomDuration::from_secs(3600); // 1 hour
+        /// let mut future_time = time.add_duration(&duration);
         /// println!("Future time: {}", future_time.format("%Y-%m-%d %H:%M:%S").unwrap());
         /// ```
         pub fn add_duration(&self, duration: &CustomDuration) -> Self {
@@ -163,9 +163,9 @@ pub mod time_utils {
         ///
         /// ```
         /// use time_duration_api::time_utils::{Time, CustomDuration};
-        /// let time = Time::now();
-        /// let duration = CustomDuration::from_secs(3600); // 1 hour
-        /// let past_time = time.sub_duration(&duration);
+        /// let mut time = Time::now();
+        /// let mut duration = CustomDuration::from_secs(3600); // 1 hour
+        /// let mut past_time = time.sub_duration(&duration);
         /// println!("Past time: {}", past_time.format("%Y-%m-%d %H:%M:%S").unwrap());
         /// ```
         pub fn sub_duration(&self, duration: &CustomDuration) -> Self {
@@ -183,7 +183,7 @@ pub mod time_utils {
         ///
         /// ```
         /// use time_duration_api::time_utils::Time;
-        /// let time = Time::now();
+        /// let mut time = Time::now();
         /// let ist_time = time.to_timezone("+05:30").unwrap();
         /// println!("Time in IST: {}", ist_time);
         /// ```
@@ -203,7 +203,7 @@ pub mod time_utils {
         ///
         /// ```
         /// use time_duration_api::time_utils::Time;
-        /// let time = Time::from_str("2023-09-20 10:30:00", "%Y-%m-%d %H:%M:%S").unwrap();
+        /// let mut time = Time::from_str("2023-09-20 10:30:00+00:00", "%Y-%m-%d %H:%M:%S%:z").unwrap();
         /// println!("Parsed time: {}", time.format("%Y-%m-%d %H:%M:%S").unwrap());
         /// ```
         pub fn from_str(time_str: &str, format: &str) -> Result<Self> {
