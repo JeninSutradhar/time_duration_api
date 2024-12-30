@@ -49,7 +49,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::Time;
+        /// use time_duration_api::time_utils::Time;
         /// let now = Time::now();
         /// println!("Current time: {}", now.format("%Y-%m-%d %H:%M:%S").unwrap());
         /// ```
@@ -67,7 +67,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::Time;
+        /// use time_duration_api::time_utils::Time;
         /// let time = Time::now();
         /// let formatted_time = time.format("%Y-%m-%d %H:%M:%S").unwrap();
         /// println!("Formatted time: {}", formatted_time);
@@ -107,7 +107,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::Time;
+        /// use time_duration_api::time_utils::Time;
         /// let time = Time::now();
         /// let formatted_time = time.format_with_timezone("%Y-%m-%d %H:%M:%S", "+05:30").unwrap();
         /// println!("Formatted time in IST: {}", formatted_time);
@@ -127,7 +127,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::Time;
+        /// use time_duration_api::time_utils::Time;
         /// let time = Time::now();
         /// let timestamp = time.timestamp().unwrap();
         /// println!("Timestamp: {}", timestamp);
@@ -144,7 +144,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::{Time, CustomDuration};
+        /// use time_duration_api::time_utils::{Time, CustomDuration};
         /// let time = Time::now();
         /// let duration = CustomDuration::from_secs(3600); // 1 hour
         /// let future_time = time.add_duration(&duration);
@@ -162,7 +162,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::{Time, CustomDuration};
+        /// use time_duration_api::time_utils::{Time, CustomDuration};
         /// let time = Time::now();
         /// let duration = CustomDuration::from_secs(3600); // 1 hour
         /// let past_time = time.sub_duration(&duration);
@@ -182,7 +182,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::Time;
+        /// use time_duration_api::time_utils::Time;
         /// let time = Time::now();
         /// let ist_time = time.to_timezone("+05:30").unwrap();
         /// println!("Time in IST: {}", ist_time);
@@ -202,7 +202,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::Time;
+        /// use time_duration_api::time_utils::Time;
         /// let time = Time::from_str("2023-09-20 10:30:00", "%Y-%m-%d %H:%M:%S").unwrap();
         /// println!("Parsed time: {}", time.format("%Y-%m-%d %H:%M:%S").unwrap());
         /// ```
@@ -250,7 +250,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::CustomDuration;
+        /// use time_duration_api::time_utils::CustomDuration;
         /// let duration = CustomDuration::from_secs(60);
         /// println!("Duration: {}", duration.format_human_readable());
         /// ```
@@ -265,7 +265,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::CustomDuration;
+        /// use time_duration_api::time_utils::CustomDuration;
         /// let duration = CustomDuration::from_millis(1000);
         /// println!("Duration: {}", duration.format_human_readable());
         /// ```
@@ -280,7 +280,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::CustomDuration;
+        /// use time_duration_api::time_utils::CustomDuration;
         /// let duration = CustomDuration::from_micros(1000000);
         /// println!("Duration: {}", duration.format_human_readable());
         /// ```
@@ -295,7 +295,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::CustomDuration;
+        /// use time_duration_api::time_utils::CustomDuration;
         /// let duration = CustomDuration::from_nanos(1000000000);
         /// println!("Duration: {}", duration.format_human_readable());
         /// ```
@@ -312,7 +312,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::CustomDuration;
+        /// use time_duration_api::time_utils::CustomDuration;
         /// let duration = CustomDuration::from_str("2h 30m").unwrap();
         /// println!("Duration: {}", duration.format_human_readable());
         /// ```
@@ -327,7 +327,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::CustomDuration;
+        /// use time_duration_api::time_utils::CustomDuration;
         /// let dur1 = CustomDuration::from_secs(60);
         /// let dur2 = CustomDuration::from_secs(120);
         /// let sum = dur1.add(&dur2);
@@ -344,7 +344,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::CustomDuration;
+        /// use time_duration_api::time_utils::CustomDuration;
         /// let dur1 = CustomDuration::from_secs(180);
         /// let dur2 = CustomDuration::from_secs(60);
         /// let diff = dur1.sub(&dur2);
@@ -361,7 +361,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::CustomDuration;
+        /// use time_duration_api::time_utils::CustomDuration;
         /// let duration = CustomDuration::from_secs(60);
         /// let multiplied = duration.mul(3);
         /// println!("Multiplied duration: {}", multiplied.format_human_readable());
@@ -377,7 +377,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::CustomDuration;
+        /// use time_duration_api::time_utils::CustomDuration;
         /// let duration = CustomDuration::from_secs(120);
         /// let divided = duration.div(2);
         /// println!("Divided duration: {}", divided.format_human_readable());
@@ -392,7 +392,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::CustomDuration;
+        /// use time_duration_api::time_utils::CustomDuration;
         /// let duration = CustomDuration::from_millis(1500);
         /// let rounded = duration.round_secs();
         /// println!("Rounded duration: {}", rounded.format_human_readable());
@@ -408,7 +408,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::CustomDuration;
+        /// use time_duration_api::time_utils::CustomDuration;
         /// let duration = CustomDuration::from_secs(60);
         /// println!("Seconds: {}", duration.as_secs());
         /// ```
@@ -421,7 +421,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::CustomDuration;
+        /// use time_duration_api::time_utils::CustomDuration;
         /// let duration = CustomDuration::from_millis(1000);
         /// println!("Milliseconds: {}", duration.as_millis());
         /// ```
@@ -434,7 +434,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::CustomDuration;
+        /// use time_duration_api::time_utils::CustomDuration;
         /// let duration = CustomDuration::from_micros(1000000);
         /// println!("Microseconds: {}", duration.as_micros());
         /// ```
@@ -447,7 +447,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::CustomDuration;
+        /// use time_duration_api::time_utils::CustomDuration;
         /// let duration = CustomDuration::from_nanos(1000000000);
         /// println!("Nanoseconds: {}", duration.as_nanos());
         /// ```
@@ -460,7 +460,7 @@ pub mod time_utils {
         /// # Example
         ///
         /// ```
-        /// use time_lib::time_utils::CustomDuration;
+        /// use time_duration_api::time_utils::CustomDuration;
         /// let duration = CustomDuration::from_secs(3661);
         /// println!("Human readable: {}", duration.format_human_readable());
         /// ```
