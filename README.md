@@ -1,5 +1,6 @@
 # time_duration_api 
 [![crates.io](https://img.shields.io/crates/v/time_duration_api)](https://crates.io/crates/time_duration_api) [![docs.rs](https://docs.rs/time_duration_api/badge.svg)](https://docs.rs/time_duration_api) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This crate provides a time and duration manipulation API for Rust projects. It aims to simplify common time-related tasks by offering a set of easy-to-use structs and methods.
 
 
