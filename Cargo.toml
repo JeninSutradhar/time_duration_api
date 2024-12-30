@@ -1,12 +1,28 @@
 [package]
 name = "time_duration_api"
-version = "0.1.6"
+authors = ["Jenin Sutradhar <jeninsutradhar@gmail.com>"]
+repository = "https://github.com/jeninsutradhar/time_duration_api"
+homepage = "https://github.com/jeninsutradhar/time_duration_api"
+readme = "README.md"
+documentation = "https://docs.rs/time_duration_api"
+keywords = ["time", "duration", "api"]
+categories = ["time-and-date"]
+version = "0.1.7"
 edition = "2021"
-description = " This crate provides a time/duration API for Rust"
+description = "This crate provides a time and duration manipulation API for Rust projects."
 license = "MIT"
+
+[lib]
+name = "time_duration_api"
+path = "src/lib.rs"
+
+[[bin]]
+name = "time_duration_api"
+path = "src/main.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
-chrono = "0.4.33"
-humantime = "2.1" 
+chrono = "0.4"
+humantime = "2.1"
+serde = { version = "1.0", features = ["derive"] }
 
