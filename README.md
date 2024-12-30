@@ -141,7 +141,7 @@ To use the `time_duration_api` crate in your Rust project, add it as a dependenc
 
 ```toml
 [dependencies]
-time_duration_api = "0.1.8"
+time_duration_api = "0.1.9"
 chrono = "0.4"
 humantime = "2.1"
 serde = { version = "1.0", features = ["derive"] }
