@@ -1,3 +1,4 @@
+mod time_duration_api;
 use time_duration_api::time_utils::{CustomDuration, Time};
 
 fn main() {
