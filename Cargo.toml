@@ -6,7 +6,6 @@ homepage = "https://github.com/jeninsutradhar/time_duration_api"
 readme = "README.md"
 documentation = "https://docs.rs/time_duration_api"
 keywords = ["time", "duration", "api"]
-categories = ["time-and-date"]
 version = "0.1.7"
 edition = "2021"
 description = "This crate provides a time and duration manipulation API for Rust projects."
