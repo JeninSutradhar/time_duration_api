@@ -2,7 +2,7 @@ use time_duration_api::time_utils::{CustomDuration, Time};
 
 fn main() {
     // Example usage of Time struct
-    let mut now = Time::now();
+    let mut now = Time::now();  // Make `now` mutable
     println!("Current Time: {}", now);
     println!(
         "Formatted Time: {}",
@@ -10,20 +10,27 @@ fn main() {
     );
 
     println!("Timestamp: {}", now.timestamp().unwrap());
+
+    // Make `future_time` mutable
     let mut future_time = now.add_duration(&CustomDuration::from_secs(3600));
     println!(
         "Time after 1 hour: {}",
         future_time.format("%Y-%m-%d %H:%M:%S").unwrap()
     );
+
+    // Make `past_time` mutable
     let mut past_time = now.sub_duration(&CustomDuration::from_secs(3600));
     println!(
         "Time before 1 hour: {}",
         past_time.format("%Y-%m-%d %H:%M:%S").unwrap()
     );
+
+    // Make `now` mutable again for timezone conversion
     let ist_time = now.to_timezone("+05:30").unwrap();
     println!("Time in IST: {}", ist_time);
 
-    let time_from_str = Time::from_str("2023-10-27 12:00:00+05:30", "%Y-%m-%d %H:%M:%S%z").unwrap();
+    // Make `time_from_str` mutable
+    let mut time_from_str = Time::from_str("2023-10-27 12:00:00+05:30", "%Y-%m-%d %H:%M:%S%z").unwrap();
     println!("Time from string: {}", time_from_str);
 
     // Example usage of CustomDuration struct
